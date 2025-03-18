@@ -25,6 +25,7 @@ This project focuses on implementing an ALS (Alternating Least Squares) model fo
 * This dataset serves as input for the recommendation engine, enabling filtering based on genres, popularity, and user preferences.
 
 4. Files needed to download so you can run the code
+* These files just download it to the resources folder
 * https://docsend.com/view/s/dd7ffi2pkm4fhuu9
 ## How to Use
 1. Run ALS model_NB.ipynb:
