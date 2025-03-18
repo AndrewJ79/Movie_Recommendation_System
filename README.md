@@ -23,6 +23,9 @@ This project focuses on implementing an ALS (Alternating Least Squares) model fo
     * IMDB ratings and vote counts.
     * Taglines and brief overviews.
 * This dataset serves as input for the recommendation engine, enabling filtering based on genres, popularity, and user preferences.
+
+4. Files needed to download so you can run the code
+* https://docsend.com/view/s/dd7ffi2pkm4fhuu9
 ## How to Use
 1. Run ALS model_NB.ipynb:
 
