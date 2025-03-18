@@ -29,7 +29,7 @@ This project focuses on implementing an ALS (Alternating Least Squares) model fo
 * These files just download it to the resources folder
 * https://docsend.com/view/s/dd7ffi2pkm4fhuu9
 ### How to Use
-1.Added Api key and .env File
+1. Added Api key and .env File
 
 * First Thing you need to do is Added a .env file to Project4_NB Folder and put TMDB_API_KEY="API_KEY" 
 * Second sign up on TMDB and get your self a API KEY then copy the and you will and you will paste it in the .evn file where API_KEY is
