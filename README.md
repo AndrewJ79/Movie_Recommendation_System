@@ -43,7 +43,7 @@ This project focuses on implementing an ALS (Alternating Least Squares) model fo
 * After that you wil right click on the app.py file and open in integrated terminal and run this code "Python App.py" in the integrated terminal
 * A website should pop up but if not there will be an https in the pop up and it will look like this "Running on http://127.0.0.1:5500" and just press Ctrl or command Key and left click 
 
-* If additional analysis is required, review this notebook for supplementary insights or data transformations.
+
 ## Dependencies
 * Python 3.x
 * Jupyter Notebook
