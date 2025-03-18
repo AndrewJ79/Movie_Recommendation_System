@@ -37,7 +37,7 @@ This project focuses on implementing an ALS (Alternating Least Squares) model fo
 
 * These files just download it to the resources folder
 * https://docsend.com/view/s/dd7ffi2pkm4fhuu9
-3.Open Project4_NB Folder in VSCode
+3. Open Project4_NB Folder in VSCode
 
 * Make sure your .env File has a Gear Icon next to it if not then just rename it in VSCode and it will work that way
 * After that you wil right click on the app.py file and open in integrated terminal and run this code "Python App.py" in the integrated terminal
