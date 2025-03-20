@@ -1,57 +1,149 @@
 # README: Movie Recommendation and Analysis Project
 ## Overview
-This project focuses on implementing an ALS (Alternating Least Squares) model for movie recommendations using collaborative filtering. The analysis is supplemented with insights derived from movie metadata and processed datasets.
 
-## Files
-1. ALS model_NB.ipynb
+This project implements a Movie Recommendation System using both 
+Collaborative Filtering and Content-Based Filtering techniques. The 
+system provides personalized movie recommendations based on user 
+preferences and ratings. The models use the Alternating Least Squares 
+(ALS) algorithm for collaborative filtering and metadata for content-based 
+filtering.
 
-* This Jupyter Notebook implements an ALS model for collaborative filtering-based movie recommendations.
-* Key steps:
-    * Data loading and preprocessing.
-    * Matrix factorization using ALS.
-    * Model training, hyperparameter tuning, and evaluation.
-    * Generating movie recommendations based on user preferences.
-2. riley.ipynb
+## Features
+* Collaborative Filtering: Uses the Alternating Least Squares 
+(ALS) algorithm to predict user-movie ratings.
 
-* This notebook might contain additional data processing, analysis, or visualization tasks to support the recommendation system.
-* It could include feature engineering, exploratory data analysis (EDA), or alternative modeling approaches.
-3. movie_results.json
+* Content-Based Filtering: Recommends movies based on their 
+content similarity.
 
-* A JSON dataset containing metadata for various movies.
-* Information includes:
-    * Movie title, genres, release date, runtime, and popularity.
-    * Production companies and countries.
-    * IMDB ratings and vote counts.
-    * Taglines and brief overviews.
-* This dataset serves as input for the recommendation engine, enabling filtering based on genres, popularity, and user preferences.
-4. Files needed to download so you can run the code
+* Optimized Model: Hyperparameter tuning is performed to enhance 
+the model’s accuracy.
 
-* These files just download it to the resources folder
-* https://docsend.com/view/s/dd7ffi2pkm4fhuu9
-### How to Use
-1. Added Api key and .env File
+* Interactive Interface: Users can filter recommendations by genre, 
+rating, and streaming platform.
 
-* First Thing you need to do is Added a .env file to Project4_NB Folder and put TMDB_API_KEY="API_KEY" 
-* Second sign up on TMDB and get your self a API KEY then copy the and you will and you will paste it in the .evn file where API_KEY is
+## Files and Directories
 
-2. Files needed to download so you can run the code
+### Main Code Files
 
-* These files just download it to the resources folder
-* https://docsend.com/view/s/dd7ffi2pkm4fhuu9
+* MRS-collaborative.ipynb: Implements the basic collaborative 
+filtering model.
 
-3. Open Project4_NB Folder in VSCode
+* MRS-collaborative-optimized.ipynb: Implements the optimized 
+collaborative filtering model with hyperparameter tuning.
 
-* Make sure your .env File has a Gear Icon next to it if not then just rename it in VSCode and it will work that way
-* After that you wil right click on the app.py file and open in integrated terminal and run this code "Python App.py" in the integrated terminal
-* A website should pop up but if not there will be an https in the pop up and it will look like this "Running on http://127.0.0.1:5500" and just press Ctrl or command Key and left click 
+* MRS-content-based.ipynb: Implements the content-based filtering 
+model.
+
+* app.py: A Flask application that serves the recommendation models 
+via a web interface. The app provides real-time recommendations 
+based on both collaborative and content-based filtering approaches, 
+and users can filter recommendations by various criteria.
+
+### Resources Folder
 
 
-## Dependencies
-* Python 3.x
-* Jupyter Notebook
-* PySpark (for ALS implementation)
-* Pandas, NumPy, Matplotlib (for data handling and visualization)
-## Future Improvements
-* Hybrid Recommendations: Combining ALS with content-based filtering.
-* User Interface: Developing a web-based UI for real-time recommendations.
-* Enhanced Data: Adding user reviews and sentiment analysis for better personalization.
+* ratings.csv: Contains user ratings for different movies.
+
+* links.csv: Maps MovieLens IDs to TMDB IDs.
+
+* movie_results.json: Contains metadata for movies.
+
+* hyperparameter_tuning.docx: Lists different hyperparameter 
+tuning options to test accuracy.
+
+## Running the Model in Google Colab
+
+### Steps to Run:
+1. Open Google Colab.
+   
+2. Upload the necessary resource files (ratings.csv, links.csv, and 
+movie_results.json) from the resources folder.
+
+3. Run the Jupyter Notebook:
+   * Open and run MRS-collaborative.ipynb for the basic model.
+
+   * Open and run MRS-collaborative-optimized.ipynb for the 
+optimized model.
+
+4. You can experiment with different hyperparameters by referencing 
+the hyperparameter_tuning.docx file to adjust the model’s 
+configurations and check the accuracy.
+
+### Hyperparameter Tuning
+
+The hyperparameter_tuning.docx file includes various options you can 
+test to improve the model's performance. Adjusting these parameters will 
+allow you to assess the model's accuracy and improve predictions.
+
+### Flask Web Application
+* The app.py file runs a Flask web application that provides a user 
+interface for movie recommendations. Users can interact with the 
+system and receive recommendations based on:
+  * Collaborative Filtering (similar movie preferences of users).
+
+  * Content-Based Filtering (based on movie metadata such as 
+genre, description, and popularity).
+
+* The app also allows filtering of recommendations by genre, rating, 
+and streaming platform.
+
+## How to Use
+
+### Step 1: Set Up the TMDB API Key
+
+1. Create a .env file in the Project4_NB folder.
+
+
+2. Add the following line to the .env file:
+TMDB_API_KEY="API_KEY"
+
+3. Sign up on TMDB and get your own API Key.
+
+4. Copy the API Key and paste it into the .env file where API_KEY is.
+   
+### Step 2: Open Project in VSCode
+
+1. Open the Movie_Recommendation_System/working_files/NB 
+folder in VSCode.
+
+2. Ensure your .env file has a gear icon next to it. If not, just rename it 
+within VSCode, and the gear icon should appear.
+
+### Step 3: Run the Flask Application
+
+1. In VSCode, right-click on app.py and open the integrated terminal.
+
+2. In the terminal, run the following command:
+python app.py
+
+3. A local server should start, and you will see a message like:
+Running on http://127.0.0.1:5500
+
+If the browser doesn’t automatically open, hold Ctrl (or Command on Mac)
+and left-click the URL to open the website.
+## Notes:
+
+* The MRS-collaborative.ipynb file implements the basic collaborative
+filtering model, which serves as a foundation for comparison with the 
+optimized model.
+
+* The MRS-collaborative-optimized.ipynb file features the optimized
+collaborative filtering model, which has undergone hyperparameter 
+tuning for better performance.
+
+* The app.py file serves as the front-end interface, offering real-time 
+movie recommendations through both filtering methods.
+## Technologies Used
+* Python (Pandas, NumPy, Scikit-Learn, Surprise, TensorFlow)
+* Jupyter Notebook / Google Colab
+* TMDB & MovieLens Datasets
+* Flask for web application serving the models
+## Contributors
+* Val
+* Andrew
+* Nitu Bola
+* Riley
+
+## License
+This project is for educational purposes and follows an open-source license. 
+Feel free to use, modify, and share the code!
