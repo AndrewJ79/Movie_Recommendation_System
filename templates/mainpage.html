@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content‑Based Filtering</title>
+  <link rel="stylesheet" href="/static/css/style.css">  <!-- Common CSS -->
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Content‑Based Filtering Recommendations</h1>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs">
+      <button class="tab-button" onclick="location.href='/mainpage.html'">Content‑Based Filtering</button>
+      <button class="tab-button" onclick="location.href='/collaborative_filtering'">Collaborative Filtering</button>
+    </div>
+
+    <!-- Recommendation Form -->
+    <div class="recommendation-form">
+      <h2>Get Movie Recommendations</h2>
+      <form action="/recommend" method="POST">
+        <label for="genre">Genre:</label>
+        <select id="genre" name="genre">
+          <option value="" selected disabled>Select Genre</option>
+          <option value="action">Action</option>
+          <option value="comedy">Comedy</option>
+          <option value="drama">Drama</option>
+          <option value="horror">Horror</option>
+          <option value="sci-fi">Sci‑Fi</option>
+          <option value="romance">Romance</option>
+          <option value="thriller">Thriller</option>
+        </select>
+
+        <label for="mood">Mood:</label>
+        <select id="mood" name="mood">
+          <option value="" selected disabled>Select Mood</option>
+          <option value="happy">Happy</option>
+          <option value="sad">Sad</option>
+          <option value="exciting">Exciting</option>
+          <option value="dark">Dark</option>
+          <option value="thoughtful">Thoughtful</option>
+        </select>
+
+        <label for="popularity">Popular Movies:</label>
+        <input type="checkbox" id="popularity" name="popularity">
+
+        <button type="submit">Get Recommendations</button>
+      </form>
+    </div>
+
+    <!-- Displaying Movie Recommendations -->
+    <div class="movie-results">
+      {% if movies %}
+        <ul>
+          {% for movie in movies %}
+            <li>
+              <h3><strong>{{ movie.title }}</strong></h3>
+              <p>{{ movie.overview }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        {% if error %}
+          <p class="error-message">{{ error }}</p>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

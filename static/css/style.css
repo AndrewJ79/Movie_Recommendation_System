@@ -1,0 +1,193 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Set a background image for the entire page */
+    background: url('/static/css/background2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: #e0e0e0;
+}
+
+  /* Create a semitransparent overlay on the body */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);  /* Adjust transparency as needed */
+    z-index: -1;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    /* Semitransparent background for the container */
+    background-color: rgba(30, 30, 30, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid rgba(66, 66, 66, 0.7);
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #E67E22; /* Burnt orange accent */
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .tab-button {
+    background-color: #E67E22;
+    border: none;
+    color: #121212;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .tab-button:hover,
+  .tab-button:focus {
+    background-color: #CF711F;
+    transform: translateY(-3px);
+    outline: none;
+  }
+  
+  .recommendation-form,
+  .collaborative-form {
+    background-color: rgba(44, 44, 44, 0.85);
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+  
+  .recommendation-form h2,
+  .collaborative-form h2 {
+    font-size: 2rem;
+    color: #E67E22;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+  }
+  
+  select,
+  input[type="checkbox"],
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(66, 66, 66, 0.7);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: rgba(66, 66, 66, 0.85);
+    color: #e0e0e0;
+  }
+  
+  button {
+    background-color: #E67E22;
+    color: #121212;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #CF711F;
+    transform: translateY(-3px);
+  }
+  
+  .movie-results {
+    margin-top: 20px;
+  }
+  
+  .movie-results h2 {
+    font-size: 1.8rem;
+    color: #E67E22;
+    margin-bottom: 15px;
+  }
+  
+  .movie-results ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .movie-results li {
+    background-color: rgba(44, 44, 44, 0.85);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .movie-results li h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #E67E22;
+  }
+  
+  .movie-results li p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+  }
+  
+  .error-message {
+    background-color: rgba(211, 47, 47, 0.85);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      margin: 10px;
+      padding: 10px;
+    }
+    
+    header h1 {
+      font-size: 2rem;
+    }
+    
+    .tab-button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+      margin: 5px;
+    }
+    
+    .recommendation-form h2,
+    .collaborative-form h2 {
+      font-size: 1.5rem;
+    }
+    
+    button {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
