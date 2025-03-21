@@ -1,4 +1,4 @@
-# README: Movie Recommendation and Analysis Project
+# Movie Recommendation System
 ## Overview
 
 This project implements a Movie Recommendation System using both 
