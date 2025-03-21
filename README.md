@@ -138,11 +138,16 @@ movie recommendations through both filtering methods.
 * Jupyter Notebook / Google Colab
 * TMDB & MovieLens Datasets
 * Flask for web application serving the models
+
+## Datasets Used
+
+- [TMDB API](https://developer.themoviedb.org/docs)
+- [MovieLens Dataset](https://grouplens.org/datasets/movielens/)
 ## Contributors
-* Val
-* Andrew
+* Valerie Keeranan
+* Andrew Jaynes
 * Nitu Bola
-* Riley
+* Riley Laughlin
 
 ## License
 This project is for educational purposes and follows an open-source license. 
